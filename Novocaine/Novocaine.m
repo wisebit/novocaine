@@ -914,7 +914,6 @@ void sessionPropertyListener(void *                  inClientData,
     CFStringRef route;
     CheckError( AudioSessionGetProperty(kAudioSessionProperty_AudioRoute, &propertySize, &route), "Couldn't check the audio route");
     self.inputRoute = (__bridge NSString *)route;
-    CFRelease(route);
     NSLog(@"AudioRoute: %@", self.inputRoute);
     
     
